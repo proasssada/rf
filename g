@@ -61084,6 +61084,7 @@ function LouxInterval() {
 			if (Settings.AutoFire.e) {
 				let PInumb = 2 * Math.PI;
 				let MYPLAYERANGLE = Math.floor((myPlayer.angle + PInumb) % PInumb * 255 / PInumb);
+				console.log(MYPLAYERANGLE);
 				if (Settings.AutoFire.m) {
 					for (let ang = 1; ang < 31; ang++) {
 						vw.oOW.send(JSON.stringify([10, 107, (ang + MYPLAYERANGLE) % 255, 0]));
